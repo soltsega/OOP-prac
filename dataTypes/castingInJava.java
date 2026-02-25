@@ -27,6 +27,12 @@ public class castingInJava {
         double d = 1.2;
         int i = (int) d;
         System.out.println(i);
-        
+
+
+        // to cast two unrelated data types
+        int intvar = 65; 
+        System.out.println(intvar);
+        String s = String.valueOf(intvar);     
+        System.out.println(s);   
     }
 }
