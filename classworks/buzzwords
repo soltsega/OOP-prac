@@ -1,0 +1,155 @@
+java is easy to learn
+it has a robust as it has strictly typedstyle
+    - garbage collection
+    - 
+strict exception handling
+no direct pointer manipulation
+automatic memory management
+
+
+architecture neutral - write onece and run everywhere
+it is secured
+btecode verifier
+it is multithreaded - concurrent task support
+
+
+
+distributed - tcp it support
+            - remote method invocation - rmi
+it is dynamic - dynamic 
+                - runtime type information
+                - dynamic linking of the code fragments
+
+
+✔️high performance - jit compilation optimization
+
+
+
+
+✔️✔️go for more properties of the language
+
+
+
+✔️✔️ go read more about the bytecode of java and its forms
+
+what is jit in java        - 
+what is multithreading and its applications
+what are threads
+
+
+🗯️is statically typed and have high level syntax
+🗯️automatic memroy managemnt
+🗯️strong type checking and exception handling
+🗯️inspired by c++ and c but is simple
+🗯️its cross plateform compatibilty is due ot the fact that jvm and bytecode
+🗯️ what does it mean high level syntax
+
+🗯️
+
+🗯️keywords
+jvm - the protocol or the specification
+    - plateform dependent
+source code
+javac
+bytecode is an intermediate code that has an extension of .class
+     - is a code in between. 
+     - can be run in every machine 
+
+jre - is the java run time environment. is the physical implementation of jvm.
+    - 
+java api - is a massive colleciton of prewritten software packages that insulate code from the underlying hardware
+        - is the library of java
+
+🗯️🗯️java editions
+🗯️java standard edition - java se
+is the foundation of the java plateform
+code apis and jvm
+desktop and server appliecaions
+general purpose development
+
+
+🗯️java enterprise edition  - java ee
+large scale distributed systems
+web services and transactions
+banking and ecommerce
+for the enterprise level applications
+
+🗯️java micro edition - java me
+for embedded systems and iot 
+mobile phones
+lightweight applications 
+limited storage devices
+
+🗯️javafx - rich client
+rich desktop application
+advanced graphis and media
+css styling support 
+modern user inerfaces
+
+what are pager devices
+
+what is swing for styling and graphics
+
+🗯️🗯️what is jdk
+
+javac
+java- runtime launcher
+jdb - debugger
+jar - java archive tool
+javadoc - documentation
+
+
+🗯️🗯️jre
+jvm
+core libraries - java.lang,java.util
+supporting runtime tools
+is required to run java apps  
+
+🗯️🗯️build tools
+maven
+gradle
+ant 
+
+🗯️🗯️best ide
+
+🗯️intellij ide 
+advanced code analysis
+intelligent completions
+enteprise integration 
+ pluggin ecosystem
+
+
+ 🗯️eclipse
+ highly extensible
+ open source continuity
+ multilanguage support 
+ rebust debugging
+ is best for  oen source and acaemic
+
+ 🗯️netbeans
+ lightweight
+ bui builder
+ maven integration
+ beginner friendly
+  is best for academic and small projects
+
+
+  🗯️vs code
+  fast and light weight
+  extension support
+  cloud integration
+  minimal resources
+  best for cloud and microservices
+
+🗯️🗯️java program types 
+  standalone apps
+  cli and gui
+  java applets - small programs embedded in html to create interactive web browser. it is static
+  mobile apps
+  java servlets - server side components that generate dynamic web content and handle requests
+  embedded and iot
+
+
+
+
+
