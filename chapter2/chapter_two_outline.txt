@@ -9,9 +9,12 @@ java program structure
 
 🗯️🗯️jvm invokes the main method like that of main method in c++
 
-🗯️the use of the static keyword in the class declaration is to 
+🗯️ The use of the static keyword in the class declaration is to ensure that and attribute is shared by all members objects of a class
+ - it is a class member that is called by the class name
+ - it is used for constants, static variables, static methods, and configurations that are shared by all objects of a class
+ 
 
-🗯️🗯️
+🗯️
 
 
 🗯️🗯️what is the use of java comments?
