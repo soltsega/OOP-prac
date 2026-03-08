@@ -4,6 +4,7 @@ package chapter2.lesson2_3;
  * Comprehensive String Operations Guide
  * 
  * This lesson covers essential string operations in Java:
+ * - the contains() method in java
  * - String comparison methods
  * - Substring extraction
  * - String searching and manipulation
