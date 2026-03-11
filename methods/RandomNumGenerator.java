@@ -13,6 +13,12 @@ import java.util.Random;
 // varargs in java are used to pack arguments in an array
 // it is like this one 
 // public int classname (datatype of the collection... the name of the array we want to collect in)
+
+
+
+// 2 dimentional arrays
+// they are not used as usual as one dimentional arrays but they are worthy of learning
+
 public class RandomNumGenerator {
     Random random = new Random();
     
