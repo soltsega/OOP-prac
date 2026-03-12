@@ -79,7 +79,32 @@ argunent passing
 garbage collection
 
 
+
+The order of excution:
+Class loaded → static block runs
+Object created → instance block runs
+Constructor runs
+
 */
+
+
+// we can access the contents of the static block by creating an object
+// why do we need instance blocks when we can use the constructors 
+// we have to create constructors to access the contents of the contructors but we don't need to do that
+// the contents of the instance block are executed before the constructor and when the object is created
+// it is preferable to use constructors insted of instance blocks
+// they both are used for initialization but constructors are more flexible
+
+// it[instance block] was introduced in java 8
+// we can have more than one instance and static block in a class
+// They are excuted in their order as they don't have names to call by
+// Static blocks are executed first, in the mian class before the main method
+
+// why do we need more than one static block
+// it is moe of to increase the readability and mentainability of the code
+
+// 
+
 
 
 

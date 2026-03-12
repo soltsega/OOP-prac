@@ -2,12 +2,14 @@ package broCode;
 import java.util.Scanner;
 public class UserInput {
 
+    public static void main(String[] args) {
+        
+
     Scanner scanner = new Scanner(System.in);
     double a,b,c;
     System.out.print("Enter the length of the side A: ");
     a = scanner.nextDouble();
 
-    scanner.close();
 
     // the use of printf() method
     // it is used to format a string
@@ -19,7 +21,7 @@ public class UserInput {
     String name = "Solomon";
     int age = 21;
     char starts_with = 'S';
-    bool isMale = true;
+    Boolean isMale = true;
     double height = 1.78;
  
     System.out.printf("Hello %s", name);
@@ -58,7 +60,7 @@ public class UserInput {
 
 
  
-
+    }
 
 
 }
