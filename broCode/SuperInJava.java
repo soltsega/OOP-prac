@@ -10,6 +10,8 @@ It is used to access parent class methods and variables.
 // e.g. System.out.println(); here you can see that out is a static object of the System class and we are accessing it via the class name.
 // but we could do it like this: System system = new System(); system.out.println();
 
+// 
+
 
 class Parent {
     public void sayHello() {
