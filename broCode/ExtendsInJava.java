@@ -100,7 +100,7 @@ Forbidden things in java inheritance
     // }
 
  
- */g
+ */
 
 class Animal {
     public void eat() {
