@@ -32,7 +32,49 @@ package broCode;
  *
  */
 
-public class Engine {
+class Engine {
     public void start(){
-
+        System.out.println("Engine started");
     }
+    
+    public void stop(){
+        System.out.println("Engine stopped");
+    }
+    
+    @Override
+    public String toString() {
+        return "Engine{running}";
+    }
+}
+
+public class CompositionInjava{
+    
+    private Engine engine;
+    
+    // Proper composition - Engine cannot exist without Car
+    public CompositionInjava() {
+        this.engine = new Engine(); // Engine is created internally
+    }
+    
+    public void startEngine() {
+        engine.start();
+    }
+    
+    public void stopEngine() {
+        engine.stop();
+    }
+    
+    @Override
+    public String toString() {
+        return "CompositionInJava{" +
+                "engine=" + engine +
+                '}';
+    }
+    
+    public static void main(String[] args) {
+        CompositionInjava car = new CompositionInjava();
+        car.startEngine();
+        car.stopEngine();
+        System.out.println(car);
+    }
+}
