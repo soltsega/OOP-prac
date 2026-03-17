@@ -1,0 +1,110 @@
+what is generalization and specialization in inheritance
+what is the sub and super class
+
+
+what is local variable and when to use them
+what are instance varables - 
+instance variables - you have to create an object to access them
+ - the memory gets allocated when they are instantiated with an object. they will not have memory space until then 
+ - but objects will have allocated memory space as soon as they are created
+
+
+static variables - they are accessed via the class
+they are associated with the class not any object. you don't have to create an object to access the variable
+They are allocated memory as soon as the jvm loads the class they are in
+It is allocated memory only once and shared among all the objects that will be instanced
+
+
+💬💬attributes are created in the class; they are not associated with any methods
+
+what are the techniques to access class attributes
+ - the char data types have two bit size due to the fact that java uses unicode character representation methods 
+ - boolean data type does not have secific size. but commonnly one bit 
+ - data types other than boolean can entertain casting
+
+ what does byte data type mean and how are they different from charater types
+    - byte is -128 to 127 and takes 1 byte of memory
+
+    - char is 0 to 65535 and takes 2 bytes of memory
+
+💬💬naming conventions: variable and method use lowercase camel case/inner capital method of naming
+    - constants should be in uppercase[complete uppercase]. we use undercore if i have more than one word variable names
+
+
+
+the length() method
+the cahrAt() method - this takes the index as an argument 
+the indexO() - this takes a character as an argument\
+.lastIndexOf()
+.toUpperCase()
+.toLowerCase()
+.trim()
+.replace() - takes two parameters: (existing, new)
+.isEmpty() - returns a boolean value
+
+.contains() - it takes words or characters as an argument
+.equalsIgnoreCase()
+.equals()
+
+
+what about substrings?
+to extract a portion of a string
+we use .substring(start, end) method to do this
+are the start and the end of the substring inclusive or exclusive
+
+does the scanner object in java closes it by default or do i need to close everytime?
+what is the difference betwwee scanner.next(), scanner.nextDouble(), scanner.nextInt(), scanner.nextline()
+    - They accept their dedicated data types. But the jvm handles the upcasting automatically.
+    Eg.
+    int i = scanner.nextInt();
+    long l = scanner.nextLong();
+    float f = scanner.nextFloat();
+    double d = scanner.nextDouble();
+    
+
+
+**Yes, exactly!** 
+
+### **Upcasting (Automatic - No Error):**
+```java
+int → long → float → double
+byte → short → int → long → float → double
+char → int
+```
+
+### **Scanner Upcasting Examples:**
+```java
+nextByte() accepts "25"    // byte → byte ✅
+nextShort() accepts "25"   // short → short ✅  
+nextInt() accepts "25"     // int → int ✅
+nextLong() accepts "25"    // long → long ✅
+nextFloat() accepts "25"   // int → float ✅ (upcast)
+nextDouble() accepts "25"  // int → double ✅ (upcast)
+```
+
+### **Downcasting (Manual - May Need Cast):**
+```java
+double d = 25.5;
+int i = (int) d;  // Needs explicit cast ✅
+// i = 25 (truncated)
+```
+
+**Rule:** **Upcasting** = automatic (widening)
+**Downcasting** = manual (narrowing)
+
+So yes - you can call it **upcasting** that JVM handles automatically.
+
+
+switches and enhanced switches
+switch(varname){
+    case i -> do something;
+    case j -> do another thing;
+    ...
+    ..
+    .
+    default -> do whatever;
+
+}
+
+we can also comma separate the cases
+case 1, case2, ... -> do something
