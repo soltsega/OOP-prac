@@ -9,7 +9,6 @@ package chapter2.lesson2_3;
  * - Hash code consistency
  * - Ordering (Comparable interface)
  */
-
 public class ObjectComparison {
     
     public static void main(String[] args) {
@@ -238,7 +237,7 @@ class Student implements Comparable<Student> {
         Student student = (Student) obj;
         return id == student.id && 
                java.util.Objects.equals(name, student.name) && 
-               java.util.Double.compareTo(gpa, student.gpa) == 0;
+               Double.compare(gpa, student.gpa) == 0;
     }
     
     // Override hashCode() to maintain contract with equals()
