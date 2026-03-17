@@ -1,4 +1,4 @@
-package specialchars;
+package specialChars;
 
 public class SpecialCharacters {
     // 1. \n : new line
