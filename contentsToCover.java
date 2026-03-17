@@ -107,12 +107,17 @@ Constructor runs
 
 
 
+public class contentsToCover{
 
 class Person {
     String name;
     int age;
 }
 
+public contentsToCover (String name, int age) {
+this.name = name;
+this.age = age;
+}
 static void sayHello() {
     System.out.println("Hello!");
 }
@@ -166,3 +171,5 @@ public int publicNum;
 protected float protectedNum;
 int defaultNum;
 private double privateNum;
+
+}
