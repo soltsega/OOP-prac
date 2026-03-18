@@ -9,7 +9,6 @@ package chapter2.lesson2_3;
  * - Hash code consistency
  * - Ordering (Comparable interface)
  */
-
 public class ObjectComparison {
     
     public static void main(String[] args) {
@@ -110,6 +109,8 @@ public class ObjectComparison {
         System.out.println("\nMixed comparison:");
         System.out.println("str1 == str3: " + (str1 == str3)); // false
         System.out.println("str1.equals(str3): " + str1.equals(str3)); // true
+
+
         
         System.out.println("\nString interning:");
         String str5 = str3.intern(); // Returns interned string

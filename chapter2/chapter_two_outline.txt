@@ -1,0 +1,121 @@
+java program structure
+
+🗯️🗯️class:
+- the name of the class should start with uppercase letters
+- the name of the class should be singular
+- the name of the class should be a noun
+- the name of the class should be descriptive
+- the name of the class should be short
+
+🗯️🗯️jvm invokes the main method like that of main method in c++
+
+🗯️ The use of the static keyword in the class declaration is to ensure that and attribute is shared by all members objects of a class
+ - it is a class member that is called by the class name
+ - it is used for constants, static variables, static methods, and configurations that are shared by all objects of a class
+ 
+
+🗯️
+
+
+🗯️🗯️what is the use of java comments?
+ - it is used to document the code
+ - it is used to explain the code
+ - it is used to explain the purpose of the code
+ - it is used to explain the syntax of the code
+ - it is used to explain the output of the code
+ - it is used to explain the input of the code
+
+  - it is also used to write html
+instance - is an object of a class
+static - is a class member
+methods instance and static
+final keyword
+instance final and static final
+
+object instantiation
+constructors
+types of constructors
+static and instance blocks 
+this keyword
+scope resolution
+constrcutor calling
+access modifier
+packages - the names of the packages should be short,descriptive, and small letters
+        - it is used to tell the jvm where the class is located
+        - we may not have package name is our class is in the default package
+        - the package statement should be at the top of the file
+
+
+
+🗯️import statement
+is the second statement in a java program
+ eg. import java.util.*;  - this means we are importing all the classes in the java.util package
+     import java.lang.Math; - this means we are importing the Math class in the java.lang package
+
+     🗯️some classes are imported by default: the lang packages classes
+     - eg. import java.lang.String;
+     - eg. import java.lang.System;
+
+
+⚠️we can't import a packages or subpackages in java. it is not allowed
+
+🗯️methods and constructor overloading
+method overloading and how do we do that
+method overriding
+
+
+🗯️🗯️The use of the static keyword in a Java class declaration is to allow the class member to be accessed without creating an instance of the class. 
+ - It also means that the class member can only be accessed through the class itself and not through an instance of the class.
+ 🗯️let's demonstrate the use of the static keyword here 
+
+
+🗯️argument passing
+🗯️garbage collection
+
+
+
+🗯️comprehensive notes 
+program = is set of calss declarations 
+a java program can be seen as a collection of objects satisfying certain requirements and interating through funcitonaltitiesmade public
+you can't write java program without a class
+
+🗯️the name of the class coincides iwth the name of the file 
+
+
+
+🗯️🗯️ the structure of java program can be
+1. documentation
+2. package statement
+3. import statement
+4. interface declaration⚠️
+5. class declaration
+6. main method class declaration
+7. constructor declaration
+8. method declaration
+
+the name of the class with the main mathod should be the same as the name of the file
+🗯️
+
+can more than one classes be declared in a java program? yes, by using the public keyword
+
+🗯️the "out" keyword in System.outprintln() is a static field or variable name that holds reference to an object
+
+💬💬how to run java code on cli 
+javac HelloWorld.java
+java HelloWorld
+
+how to pass parameters to a java program
+you compile it and then you write the name of the bytecode file followed by the arguments you want to pass to the program
+⚠️but here the arguments are passed to the main method and can cause errors. here is how you can prevent it.
+        - you can use the static keyword to pass the arguments to the main method
+        - use for loop in the main method
+        - use while loop in the main method
+        - use do while loop in the main method
+        - use switch case in the main method
+
+💬what if the java file doesnot have package?
+ - it will be in the default package
+ - it will be in the package of the class
+
+💬 When do we type the name of the package with bytecode name? "mypackage.bytcodename"
+- it is when we compile the java file that we type the name of the package with bytecode name

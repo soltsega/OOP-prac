@@ -1,6 +1,6 @@
+package specialChars;
 
-
-public class SpecialCharactersCol {
+public class specialCharacterscol {
     public static void main(String[] args) {
         System.out.println("This is a new line character: \nSee, it moved to the next line!");
         System.out.println("This is a tab character:\tSee, it added a tab space!");
