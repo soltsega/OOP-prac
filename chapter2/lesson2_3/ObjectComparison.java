@@ -236,7 +236,7 @@ class Student implements Comparable<Student> {
         Student student = (Student) obj;
         return id == student.id && 
                java.util.Objects.equals(name, student.name) && 
-               java.util.Double.compare(gpa, student.gpa) == 0;
+               Double.compare(gpa, student.gpa) == 0;
     }
     
     // Override hashCode() to maintain contract with equals()
