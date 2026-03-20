@@ -55,6 +55,19 @@ public class WrapperClasses {
         Integer integer2 = 10; // autoboxing
         int number2 = integer2; // unboxing
         System.out.println(number2);
+
+
+        String a = Integer.toString(10);
+        System.out.println("a = " + a);
+        String b = Double.toString(10.5);
+        System.out.println("b = " + b);
+        String c = Boolean.toString(true);
+        System.out.println("c = " + c);
+        String d = Character.toString('A');  //this will output the character 'A'
+        System.out.println("d = " + d);
+
+        String all = a + " " + b + " " + c + " " + d;
+        System.out.println("all = " + all);
     }
         
 }
