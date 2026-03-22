@@ -1,5 +1,29 @@
 package OOP;
 
+
+/**
+ * Final methods
+ * 
+ * Final methods are methods that cannot be overridden
+ * They are useful when you want to ensure that the method is not overridden
+ * 
+ * Example:
+ * public class MyClass {
+ *     public final void myMethod() {
+ *         // Method cannot be overridden
+ *     }
+ * }
+ * 
+ * public class MySubclass extends MyClass {
+ *     // Compiler error: Cannot override the final method from MyClass
+ *     @Override
+ *     public void myMethod() {
+ *         // This method does not override myMethod from MyClass
+ *     }
+ * }
+ */
+
+
 public class FinalMethods{
     
 
