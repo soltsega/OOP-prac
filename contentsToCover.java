@@ -107,69 +107,71 @@ Constructor runs
 
 
 
-public class contentsToCover{
+public class contentsToCover {    
+    // Final variables
+    final double PI = 3.14;
+    final int NUMBER = 10;
+    static final double PI_VALUE = 3.14159;
+    
+    // Access modifiers example
+    public int publicNum;
+    protected float protectedNum;
+    int defaultNum;
+    private double privateNum;
+    
+    // Static block
+    static {
+        System.out.println("Static block executed");
+    }
+    
+    // Instance block
+    {
+        System.out.println("Instance block executed");
+    }
+    
+    // Constructor
+    public contentsToCover(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+    
+    // Constructor chaining
+    public contentsToCover(String name) {
+        this(name, 25);
+    }
+    
+    // Static method
+    static void sayHello() {
+        System.out.println("Hello!");
+    }
+    
+    // Instance methods
+    void sayName() {
+        System.out.println("My name is " + this.name);
+    }
+    
+    void printThis() {
+        System.out.println("This refers to: " + this);
+    }
+    
+    public static void main(String[] args) {
+        contentsToCover obj = new contentsToCover("Alice", 30);
+        obj.sayName();
+        sayHello();
+    }
+}
 
+// Separate Person class (not nested)
 class Person {
     String name;
     int age;
-}
-
-public contentsToCover (String name, int age) {
-this.name = name;
-this.age = age;
-}
-static void sayHello() {
-    System.out.println("Hello!");
-}
-
-void sayName() {
-    System.out.println("My name is " + this.name);
-}
-
-final int PI = 3.14;
-
-final int NUMBER = 10;
-static final double PI_VALUE = 3.14159;
-
-Person person = new Person();
-
-class Person {
-    String name;
-    int age;
-
+    
     Person() {
         System.out.println("Default constructor called");
     }
-
+    
     Person(String name, int age) {
         this.name = name;
         this.age = age;
     }
-}
-
-static {
-    System.out.println("Static block executed");
-}
-
-{
-    System.out.println("Instance block executed");
-}
-
-void printThis() {
-    System.out.println("This refers to: " + this);
-}
-
-void printFullName() {
-    System.out.println(this.name + " " + Person.name);
-}
-
-Person(String name) {
-    this("John", 25);
-}
-
-public int publicNum;
-protected float protectedNum;
-int defaultNum;
-private double privateNum;
-
 }
