@@ -56,7 +56,7 @@ public class FileHandlingMethods {
             System.out.println("Successfully wrote to the file.");
         } catch (IOException e) {
             System.out.println("An error occurred.");
-            e.printStackTrace();
+            e.printStackTrace();  //prints the error details
         }
     }
     
