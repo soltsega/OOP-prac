@@ -108,3 +108,97 @@ switch(varname){
 
 we can also comma separate the cases
 case 1, case2, ... -> do something
+
+
+
+👉3/25/2025
+
+what are packages for in java
+how to access files or classes in a packages 
+how to import the packages and their classes
+there are two ways of omporting packages 
+1. import package or import package1.package2....packageN *
+or import pack1.pack2....className
+
+2. fully qualified class name: what does this temr mean in the first place
+when do we use fully qualified class name 
+This is how to
+create class 
+then p1.p2.A a = new p1.p2.A()
+we prefer this one to resolve name space collision
+
+how can i access packages with the same name from different packages? which method of importing packages can create this Error 
+Fully qualified class name can fix this problem
+pack.classname obj = new pack.classname();
+
+is there any danger of overhead while we use the fully qulified class name method of importing packages 
+whwat would be the danger of importing packages if allowed in java 
+
+
+
+
+ 👉 Argument passing
+ it is ony by value in java
+ you pass it by data or reference depending on whether the data type id primitive or user defined
+reference data types are : classes, interfaces, or arrays
+
+the class name is data type since when it is created . it uses address or reference
+when creating object it is created in the heap and its reference or memory address will be assigned to the object name. the data type of that object will be the name of the class 
+
+
+what is the difference between parameter passing in java and c++
+what does it mean by data
+what does it mean by reference and what is the difference between in c++ and java 
+
+👉 how to pass static, final or instance variables or attributes
+
+
+how to work with arrays and pointers in java 
+
+
+
+
+contents to cover after class until 7:00
+packages in detail 
+argument passing in detail 
+
+
+
+what are the types of constructors: theya re of three types
+default
+copy constructors 
+parameterized constructors 
+
+
+why do we need to create objects in the class
+why do we need to create static object and how does it work in the descendant objects  
+
+
+👉garbage collection
+the objects are addressed in the heap memory and they need a name that reference them(hold their address)  in the stack memory
+what are the methods in java to make objects vulnerable to garbage collection
+1. set the object to null
+2. assign the object to another object
+3. using the static method: System.gc() but when do we use it and it is critical to use or not to use 
+4. using the deprecated finalize method. it is a protected method.
+    protected void finalize(){
+
+    }
+
+
+how to use the gc() method and the finalize method at the same time 
+
+
+what does anonymous object instantiation mean?  
+new ClassName()
+it is an object that does nothave referecnce to its memory address 
+when to use it?
+it gives us one time service since it does not have lasting reference 
+like this one: new ClassName().attributes
+
+
+
+
+
+
+
