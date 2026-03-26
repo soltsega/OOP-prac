@@ -1,0 +1,407 @@
+CLASS NOTES - JAVA OOP
+
+==================================================
+1) INHERITANCE BASICS
+==================================================
+Generalization:
+- Moving common features from specific classes into a more general superclass.
+- Example: Dog and Cat share eat() and sleep(), so those go to Animal.
+
+Specialization:
+- Creating more specific subclasses from a general superclass.
+- Example: Animal -> Dog with bark().
+
+Superclass (parent/base class):
+- The class being inherited from.
+
+Subclass (child/derived class):
+- The class that inherits fields/methods from the superclass.
+
+
+==================================================
+2) CLASS FUNDAMENTALS (2.1 - 2.7)
+==================================================
+2.1 Defining a Class
+- A class is a blueprint for objects.
+- It defines fields (state) and methods (behavior).
+
+Example:
+class Person {
+    String name;
+    int age;
+
+    void display() {
+        System.out.println(name + " " + age);
+    }
+}
+
+2.2 Creating an Object
+- Object declaration creates a reference variable.
+- Instantiation creates actual object in heap using new.
+
+Example:
+Person p;              // reference declaration
+p = new Person();      // object creation + assignment
+
+2.3 Instantiating and Using Objects
+- Instantiation: new ClassName(...)
+- Use object members via dot operator: obj.field, obj.method()
+
+2.3.1 Printing to the Console
+- System.out.print(...) prints without newline.
+- System.out.println(...) prints with newline.
+- System.out.printf(...) supports formatting.
+
+2.3.2 Methods and Messages
+- Calling a method is sending a message to an object.
+- Method signature includes method name and parameter types.
+
+2.3.3 Parameter Passing
+- Java is always pass-by-value.
+- Primitive: copy of value.
+- Reference type: copy of reference (method can mutate object state).
+
+2.3.4 Comparing and Identifying Objects
+- == compares references (same object or not).
+- equals() compares logical/content equality (if overridden).
+- Default equals() in Object behaves like == unless overridden.
+
+2.3.5 Destroying Objects
+- No manual delete in Java.
+- Garbage Collector reclaims unreachable objects.
+- System.gc() is only a request, not guaranteed immediate collection.
+- finalize() is deprecated for removal; do not rely on it.
+
+2.3.6 Enumerated Types
+- enum defines fixed set of named constants.
+
+Example:
+enum Day { MON, TUE, WED, THU, FRI, SAT, SUN }
+
+2.4 Instance Fields
+- Non-static fields belong to object instances.
+- Each object has its own copy.
+- Access through object reference.
+
+2.5 Constructors and Methods
+- Constructor initializes object state.
+- Constructor name must match class name.
+- No return type for constructors.
+- Methods define behavior and may return values.
+
+Constructor types commonly used:
+- No-arg constructor
+- Parameterized constructor
+- Copy-constructor pattern (manual in Java)
+
+Constructor chaining (important):
+- this(...) calls another constructor in same class.
+- super(...) calls parent constructor.
+- Must be first statement inside constructor.
+
+Example:
+class Person {
+    String name;
+    int age;
+    String city;
+
+    Person(String name) {
+        this.name = name;
+    }
+
+    Person(String name, int age) {
+        this(name);      // calls first constructor
+        this.age = age;
+    }
+
+    Person(String name, int age, String city) {
+        this(name, age); // calls second constructor
+        this.city = city;
+    }
+}
+
+2.6 Access Modifiers
+- public: accessible from anywhere.
+- protected: same package + subclasses in other packages.
+- default (package-private): same package only.
+- private: same class only.
+
+Access control table:
+- private -> class only
+- default -> class + package
+- protected -> class + package + subclass (outside package)
+- public -> everywhere
+
+Why it matters:
+- Encapsulation
+- Prevent unsafe direct access
+- API design clarity
+
+2.7 Packages
+- Package groups related classes and avoids naming conflicts.
+- Declared at top of file: package mypackage;
+
+Import options:
+1. import p1.p2.ClassName;
+2. import p1.p2.*;
+3. fully qualified class name:
+   p1.p2.ClassName obj = new p1.p2.ClassName();
+
+Fully qualified names are helpful for class-name collisions.
+
+
+==================================================
+3) VARIABLES: LOCAL, INSTANCE, STATIC
+==================================================
+Local variable:
+- Declared inside method/constructor/block.
+- Scope is limited to that block.
+- Must be initialized before use.
+
+Instance variable (field/attribute):
+- Declared inside class, outside methods.
+- Exists per object instance.
+
+Static variable (class variable):
+- Shared by all objects of class.
+- Created when class is loaded.
+- Access preferred via class name.
+
+
+==================================================
+4) DATA TYPES AND CASTING
+==================================================
+byte:
+- 8 bits (1 byte), range: -128 to 127
+
+char:
+- 16 bits (2 bytes), range: 0 to 65535 (UTF-16 code unit)
+
+boolean:
+- true or false (exact memory size not fixed by language spec)
+
+Casting:
+- Widening conversion is automatic.
+- Narrowing conversion needs explicit cast.
+
+Example:
+double d = 25.5;
+int i = (int) d; // 25
+
+
+==================================================
+5) STRING METHODS (COMMON)
+==================================================
+length(), charAt(index), indexOf(value), lastIndexOf(value)
+toUpperCase(), toLowerCase(), trim(), replace(old, new)
+isEmpty(), contains(text), equals(), equalsIgnoreCase()
+substring(start, end) -> start inclusive, end exclusive
+
+
+==================================================
+6) SCANNER INPUT NOTES
+==================================================
+next(): next token
+nextInt(), nextDouble(), ... : typed token parsing
+nextLine(): full line
+
+Important:
+- nextInt()/nextDouble() leave newline in buffer.
+- consume with nextLine() before reading full line text.
+
+Pattern:
+int x = sc.nextInt();
+sc.nextLine();
+String name = sc.nextLine();
+
+
+==================================================
+7) SWITCH AND ENHANCED SWITCH
+==================================================
+Classic:
+switch (x) {
+  case 1:
+    break;
+  default:
+}
+
+Enhanced:
+switch (x) {
+  case 1, 2 -> System.out.println("one or two");
+  default -> System.out.println("other");
+}
+
+
+==================================================
+8) OBJECTS, MEMORY, AND GARBAGE COLLECTION
+==================================================
+- Objects are created in heap.
+- References are stored in stack frames/local variables.
+- Object becomes eligible for GC when unreachable.
+
+Ways object can become unreachable:
+1. Reference set to null
+2. Reference reassigned
+3. Reference goes out of scope
+4. Isolated graph with no live references
+
+
+==================================================
+9) ANONYMOUS OBJECT
+==================================================
+- Object created without storing reference.
+- Useful for one-time operation.
+
+Example:
+new Person("A", 20, "X").display();
+
+
+==================================================
+10) ARRAYS AND REFERENCES
+==================================================
+- Java uses references, not pointer arithmetic.
+- Arrays are objects.
+
+Example:
+int[] arr = new int[5];
+
+
+==================================================
+11) QUICK REVISION CHECKLIST
+==================================================
+- Explain pass-by-value for primitives vs references.
+- Use Scanner safely with nextLine after numeric input.
+- Differentiate == and equals().
+- Explain constructor chaining with this(...).
+- Identify proper access modifier for a field/method.
+- Resolve package naming conflict with fully qualified class name.
+
+==================================================
+12) JAVA PROGRAM STRUCTURE (ADDED)
+==================================================
+Class members:
+- Attributes/fields
+- Methods (instance and static)
+- Constructors
+- Blocks (static and instance initializer blocks)
+- Nested types (optional)
+
+final keyword:
+- final variable: value/reference cannot be reassigned.
+- final method: cannot be overridden.
+- final class: cannot be inherited.
+
+instance final vs static final:
+- instance final: different object can hold different final value (set once per object, usually in constructor).
+- static final: one constant shared by all objects (class-level constant).
+
+Object instantiation:
+- Creating object with new, e.g., new Person().
+- Allocates memory in heap and returns a reference.
+
+Constructors:
+- Special methods used to initialize objects.
+- No return type.
+- Called automatically when object is created.
+
+Constructor types (practical):
+- No-arg constructor (can be compiler-generated default if no constructor exists)
+- Parameterized constructor
+- Copy-constructor pattern (manual pattern in Java)
+
+Constructor calling/chaining:
+- this(...) calls another constructor in same class.
+- super(...) calls parent constructor.
+- Must be first statement in constructor.
+
+Method and constructor overloading:
+- Same name, different parameter list (number/type/order).
+- Return type alone cannot overload a method.
+
+this keyword:
+- Refers to current object.
+- Common uses:
+  1. Access current fields (this.name)
+  2. Resolve shadowing between field and parameter
+  3. Constructor chaining with this(...)
+
+Scope resolution:
+- Local variable scope: inside method/block only.
+- Instance members: accessible through this or object reference.
+- Static members: belong to class; access via ClassName.member.
+
+Access modifiers:
+- public: everywhere
+- protected: same package + subclasses outside package
+- default (package-private): same package only
+- private: same class only
+
+Package:
+- Groups related classes and prevents name collisions.
+- Improves organization and modularity.
+
+Argument passing:
+- Java is pass-by-value only.
+- Primitive: copy of value.
+- Reference type: copy of reference.
+
+Garbage collection:
+- JVM reclaims unreachable objects automatically.
+- System.gc() is only a request.
+
+
+Static block and instance block:
+- static { ... }
+  - Runs when class loads.
+  - Runs once per class loader.
+  - Common for one-time class initialization.
+
+- { ... } (instance initializer block)
+  - Runs every time an object is created.
+  - Runs before constructor body.
+  - Useful for shared initialization across multiple constructors.
+
+Execution order summary:
+1. Class loaded -> static blocks run (top to bottom)
+2. Object created -> instance blocks run (top to bottom)
+3. Constructor runs
+
+If multiple blocks exist:
+- Multiple static blocks are allowed and run in declaration order.
+- Multiple instance blocks are allowed and run in declaration order.
+
+Important correction:
+- Instance initializer blocks were not introduced in Java 8; they existed in earlier Java versions.
+
+Practical note:
+- Constructors are generally preferred for clarity and flexibility.
+- Instance blocks are mainly helpful to avoid duplicated setup across many constructors.
+
+Why more than one static block?
+- To separate unrelated initialization logic for readability/maintainability.
+- Still execute in order of appearance.
+
+Static block and main method:
+- In the main class, static initialization runs before main().
+
+Example:
+public class Example {
+    static {
+        System.out.println("Static block - runs once");
+    }
+
+    {
+        System.out.println("Instance block - runs per object");
+    }
+
+    public Example() {
+        System.out.println("Constructor - runs per object");
+    }
+}
+
+Output when creating two objects:
+Static block - runs once
+Instance block - runs per object
+Constructor - runs per object
+Instance block - runs per object
+Constructor - runs per object
