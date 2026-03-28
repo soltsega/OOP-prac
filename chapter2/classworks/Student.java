@@ -1,4 +1,4 @@
-package classworks;
+package chapter2.classworks;
 /*
  1. define the package
  2. create parameteriezed construtors

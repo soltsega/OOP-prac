@@ -1,4 +1,4 @@
-package classworks;
+package chapter2.classworks;
 
 public class attributeMethodsDemo {
     

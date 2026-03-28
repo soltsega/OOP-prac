@@ -1,7 +1,23 @@
+package chapter_four;
 import java.util.Scanner;
 
 
 /**
+ * 
+ * 
+ * 
+ * Difference between throws and throw in Java:
+ * 
+ * The throws keyword is used to declare an exception.
+ * It is used to specify that a method may throw one or more exceptions.
+ * It is used in the method signature.
+ * 
+ * The throw keyword is used to explicitly throw an exception.
+ * It is used to throw an exception from within a method.
+ * It is used inside a method body.
+ * 
+ * Throws is used to declare an exception, while throw is used to explicitly throw an exception.
+
  * Notes on Java Methods:
  * 
  * 1. getCause(): Returns the cause of the exception, or null if the cause is nonexistent or unknown.
@@ -15,6 +31,8 @@ import java.util.Scanner;
  * The printStackTrace() method is used to print the stack trace of the exception.
  * 
  * The toString() method is used to get a string representation of the exception.
+ * 
+ * 
  */
 public class ExceptionConceptsDemo {
 
