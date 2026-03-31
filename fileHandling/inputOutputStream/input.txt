@@ -1,0 +1,7 @@
+I build machine learning systems that turn raw and unstructured data into practical, usable applications. 
+My work focuses on combining data engineering, NLP, and generative AI to solve real-world problems—ranging from retrieval-augmented generation (RAG) systems and LLM-powered chatbots to predictive models in finance and economic analysis.
+I’ve worked across the full lifecycle of data-driven systems: collecting and structuring data, building and fine-tuning models, and integrating them into end-to-end pipelines.
+My experience includes developing RAG systems for knowledge retrieval, applying transformer models for question answering and text summarization, and building predictive models for domains such as credit risk and financial inclusion.
+I also have a strong background in web development, which has significantly shaped how I approach machine learning—focusing on usability, deployment, and building interfaces that make models accessible in real-world applications.
+Alongside this, I maintain a solid foundation in software engineering, supported by projects that reflect strong problem-solving and system design skills.
+I’m currently focused on deepening my expertise in machine learning and generative AI by building reliable, production-ready systems rather than isolated experiments.
