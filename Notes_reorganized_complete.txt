@@ -405,3 +405,49 @@ Instance block - runs per object
 Constructor - runs per object
 Instance block - runs per object
 Constructor - runs per object
+
+
+what is Encapsulation
+hiding dta with in classes
+making it availableonly through methods
+each object protects and manages its own data 
+this is called self governing
+the advantages of encapsulation are bundling(data and methods) and hiding the data
+the main rationale of using encapsulation is to hide the data
+
+
+the outline to go with
+polymorphism
+
+
+encapsulation
+inheritance
+inheritance vs encapsulation(protected acces modifiers)
+consructor and super keyword
+multilevel hierarchy
+when constructors are called
+method overriding
+superclass variables can reference subclass objects 
+
+dynamic methofd dispatch 
+prevent method overriding (final and static)
+type casting
+prevent inheritance
+
+
+data should private as a rule of thumb 
+
+there are two types of methods: constructors and user defined methods
+we use use getters and setters for this purpose not normal constructors or user defined methods
+
+setter methods: to set/initialize and update 
+syntax:
+void setFieldname(type variableName){
+    fieldName = variableName;
+}
+in general setter methods have one parameter
+
+
+what is field name here 
+
+getters

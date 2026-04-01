@@ -4,14 +4,10 @@ package broCode;
 The super object in java is used to refer to the parent class.
 It is used to access parent class methods and variables.
 
+one thing here, we can access static objects via the instantiated objects or the class names themselves but it is recommended to use the class names.
+e.g. System.out.println(); here you can see that out is a static object of the System class and we are accessing it via the class name.
+but we could do it like this: System system = new System(); system.out.println();
 */
-
-// one thing here, we can access static objects via the instantiated objects or the class names themselves but it is recommended to use the class names.
-// e.g. System.out.println(); here you can see that out is a static object of the System class and we are accessing it via the class name.
-// but we could do it like this: System system = new System(); system.out.println();
-
-// 
-
 
 class Parent {
     public void sayHello() {
