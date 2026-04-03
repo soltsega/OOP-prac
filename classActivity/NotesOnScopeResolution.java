@@ -1,3 +1,4 @@
+package classActivity;
 /**
  * we use it[scope resolution] when we have intance or static variables and local variable
 

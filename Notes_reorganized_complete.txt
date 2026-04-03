@@ -429,7 +429,8 @@ when constructors are called
 method overriding
 superclass variables can reference subclass objects 
 
-dynamic methofd dispatch 
+dynamic method dispatch is upcasting the object to the superclass. it is automatical when the method is called
+static method dispatch is downcasting the object to the subclass. it is automatical when the method is called
 prevent method overriding (final and static)
 type casting
 prevent inheritance
@@ -448,6 +449,58 @@ void setFieldname(type variableName){
 in general setter methods have one parameter
 
 
-what is field name here 
-
+what is field name here: it is the variable name to get set
 getters
+
+
+
+2
+1. Setters and Method Injection
+Setters are public methods used to update private variables. This is called encapsulation. You can "set" a behavior by passing a Lambda or a Functional Interface (like Runnable) into a setter. This lets you swap out logic while the program is running. It is a best practice to put validation logic inside a setter.
+
+2. Static and Final Attributes
+Static attributes belong to the class. Use Static Setters (ClassName.setVal) so you do not need an object to change the value. Final attributes are constants and cannot have setters. You must set them at declaration or inside the Constructor. You can set both inside a constructor without using parameters to give objects a factory default state.
+
+3. Dynamic Method Dispatch (Runtime Polymorphism)
+This is when a call to an overridden method is resolved at runtime based on the actual Object, not the Reference type. The JVM "dispatches" the call at the last second while the program is running. This requires a Parent reference pointing to a Child object: Parent p = new Child().
+
+4. Reference Types: Parent vs. Child
+If you use a Child Reference (Dog d = new Dog()), you can see everything—both general animal methods and specific dog methods. If you use a Parent Reference (Animal a = new Dog()), you can only see Animal methods. The purpose of this is Generalization. It allows you to create one list that holds Dogs, Cats, and Birds together rather than needing separate lists for every type.
+
+Quick Rule of Thumb:
+- Use Static for shared data.
+- Use Final for unchangeable data.
+- Use Parent References for flexible, clean code.
+- Use Child References when you need a specific special feature of that child.
+
+
+
+what is the idiffernce between method and constructor inejection
+Method Injection is a design pattern where an object receives its dependencies (the tools or data it needs to work) through a method rather than through its constructor.
+Gemini said
+Method Injection is a design pattern where an object receives its dependencies (the tools or data it needs to work) through a method rather than through its constructor.
+
+In the context of our previous conversation, it is the formal name for "setting a method" or "setting a behavior" using a setter.
+
+How it Works
+Instead of a class creating its own dependency internally (which makes the code rigid), you provide a method that allows an external force to "inject" that dependency later.
+
+1. The Rigid Way (No Injection)
+The class is stuck with one specific behavior.
+
+Java
+public class TextEditor {
+    private SpellChecker checker = new EnglishSpellChecker(); // Hardcoded
+}
+2. The Method Injection Way (The Setter)
+The class is flexible. You can "inject" any checker you want at any time.
+
+Java
+public class TextEditor {
+    private SpellChecker checker;
+
+    // This is Method Injection
+    public void setSpellChecker(SpellChecker checker) {
+        this.checker = checker;
+    }
+}

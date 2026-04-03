@@ -1,3 +1,4 @@
+package classActivity;
 public class EnumDemo {
 // Define two enum types−−definitions go OUTSIDE The main() routine !
 enum Day { SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY }

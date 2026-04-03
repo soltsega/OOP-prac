@@ -1,3 +1,4 @@
+package classActivity;
 // 1. By using the comparator operator: ==
 // stringa == string2
 // this will output false if they 

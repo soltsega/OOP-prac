@@ -1,3 +1,4 @@
+package classActivity;
 // Java Program Structure
 
 // java program strucutre
