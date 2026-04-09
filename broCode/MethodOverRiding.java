@@ -16,9 +16,6 @@ public class MethodOverRiding {
     static void ትዝታ(){
         System.out.println("play the music");
     }
-
-
-
     
 }
 

@@ -553,9 +553,10 @@ we have to have two things in dynamic mehtod calling
 1. method overriding 
 2. super class variable references the subclas object 
 
-
-
-
 what is the diffrence between datatype[] varname and datatype varname[] in array declaration 
 
-
+write a java program that exercises inheritance using holidays
+like clas fasica, eid, ...
+holidays will be the parent class 
+use religious holidays 
+may be cool both encapsulation and inheritance 
