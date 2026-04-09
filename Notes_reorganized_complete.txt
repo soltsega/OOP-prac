@@ -432,8 +432,12 @@ superclass variables can reference subclass objects
 dynamic method dispatch is upcasting the object to the superclass. it is automatical when the method is called
 static method dispatch is downcasting the object to the subclass. it is automatical when the method is called
 prevent method overriding (final and static)
-type casting
-prevent inheritance
+type casting; narrowing and widening
+prevent inheritance: this is done by using the final keyword. we can't use this keyword in a static block.
+
+polymorphism
+method overriding
+method overloading
 
 
 data should private as a rule of thumb 
