@@ -508,3 +508,33 @@ public class TextEditor {
         this.checker = checker;
     }
 }
+
+
+
+
+method overriding
+when we have methods with the same signature
+we can't have method overriding in the same class: we must have parent and child classes
+they must have methods with the same signatture then we override the parent method with the child one  
+
+
+what if we use the abstract classes and methods to achieve this
+what is the specific use of the method overriding 
+
+
+what are the things to have got to know in this toopic
+
+what if we don't use the @override keyword before the method we want to override with 
+
+
+what is the run time and compile time polymorphism mean 
+
+
+what are the other rule to follow in overriding: besides the above two 
+the access modifier rule. 
+what should be the access modifier of the child class method 
+the access modifier of the child class method must be the same  as or more visible 
+private -> default --> protected -> public 
+
+you can't reduce the visibility of the inherited method 
+

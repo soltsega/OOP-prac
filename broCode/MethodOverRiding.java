@@ -10,5 +10,21 @@ package broCode;
 
 
 public class MethodOverRiding {
+    public static void main(String[] args) {
+        ትዝታ();
+    }
+    static void ትዝታ(){
+        System.out.println("play the music");
+    }
+
+
+
     
 }
+
+
+// public class MusicScale(){
+//         void play(){
+//             System.out.println("play the music");
+//     }
+//     }
