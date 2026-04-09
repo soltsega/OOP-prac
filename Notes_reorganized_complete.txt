@@ -549,10 +549,13 @@ the object can't access the members of the child Class
 which one is better:having parent variable of child variable object 
 what does it mean by static method calling or dispatch
 the dynamic one is identified at run time 
-we have two things in dynamic mehtod calling 
+we have to have two things in dynamic mehtod calling 
 1. method overriding 
 2. super class variable references the subclas object 
- 
 
+
+
+
+what is the diffrence between datatype[] varname and datatype varname[] in array declaration 
 
 
