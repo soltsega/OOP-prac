@@ -537,4 +537,22 @@ the access modifier of the child class method must be the same  as or more visib
 private -> default --> protected -> public 
 
 you can't reduce the visibility of the inherited method 
+how can we stoop method overriding at a specific class: preventing method overriding using static and final 
+
+
+how can the super class reference the subclass object 
+dynamic method dispatch 
+what if we make the data type of the parent object the type of the child class
+the object can't access the members of the child Class
+
+
+which one is better:having parent variable of child variable object 
+what does it mean by static method calling or dispatch
+the dynamic one is identified at run time 
+we have two things in dynamic mehtod calling 
+1. method overriding 
+2. super class variable references the subclas object 
+ 
+
+
 
