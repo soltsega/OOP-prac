@@ -511,6 +511,80 @@ public class TextEditor {
 
 
 
+There are of four types of inheritances we will see in this NOTES
+1. simple/single
+2. multilevel
+3. multiple
+4. hierarchical inheritance
+
+
+what diamond problem? it happens when we try to apply multiple inheritance
+it is caused by the ambiguity created in multiple inheritance 
+
+
+
+what are the concepts of multiple, multilevel and hierarchical inheritance
+what are the differnces between multilevel and hierarchical inheritance
+
+
+what is hierarchical inheritance
+
+
+why is multiple inheritance not allowed in Javai
+it is intended to make it simple but How? 
+
+
+let's see what wil happen if we apply multiclas inheritance 
+
+
+
+multilevel inheritance  
+
+
+
+hierarchical inheritance 
+
+
+what is the relatiosnhip between constructors and inheritance concepts 
+the child class must call the parent's constructor
+the default one can be called by the default construcrot of the child
+but we have to explicitely call the parameterizd constructor 
+we use "super(param)" to call the consctructor of the parent constructor 
+
+
+we have to pass the parameters in this Way
+ but we have another way of doing this: just declaring empty parent class constructor
+we call the parameterized constructor in the default constructor of teh child class 
+cascading
+
+ how many constructors can we call?
+ super() has to be the first statement in the constructor as "this() " keyword
+
+ super() is used only in the constructor: only in the constructor body
+
+
+ can we have constructor cascading 
+ can we call the default constructor in the parametrized constructor ?
+
+
+The child can't call the grandparent's constructor: it has to be in order.they must be chained
+
+
+what are the tradeoffs of those three methods of calling the parent's constructors 
+why can't we call the name of the construtor since it is a method
+it is invoked when the object is created 
+
+
+which one is the best one to use and when 
+ehy can't the parent access the properties fo the chldren
+what is cross reference and what is its danger
+
+what does multilevel hierarchy and when to use it
+how to implement it 
+
+cover the method overrriding and prepare questions in advance
+
+
 
 method overriding
 when we have methods with the same signature
