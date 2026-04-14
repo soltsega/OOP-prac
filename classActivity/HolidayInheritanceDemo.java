@@ -1,3 +1,4 @@
+package classActivity;
 // Holiday.java - Parent class demonstrating encapsulation and inheritance
 class Holiday {
     // Encapsulated fields
