@@ -634,3 +634,64 @@ like clas fasica, eid, ...
 holidays will be the parent class 
 use religious holidays 
 may be cool both encapsulation and inheritance 
+
+
+
+how to prevent method overriding using final and static 
+i can use the final keyword as we can use it for variables 
+it will not get modifierd or overriden but inherited 
+
+what would happen if the child class tries to do that?
+it raises compile time error, syntax error 
+
+
+what if we use the static keyword and what would happen if we do the same thing as we have done to final classes
+what are the differences between the static and final keywords in this usage 
+
+the diffference is that we can't have a final method that have the same signature as teh class final method but we can have that of static 
+we can call the class static method using the name of the class it is in. it will cause recursion if we call it using just the name of the method 
+
+how to use the super keyword 
+
+
+what if we make the class static 
+
+
+
+what if we make the class final 
+
+
+
+
+
+
+
+
+typecasting 
+the superclass can refer to the child class 
+
+there are 8 primitive data types in java 
+implicit downcasting will cause sytax error 
+it will cause an runtime erro if we try to downcast parent classes to childs
+the error or exception is ClassCastException
+
+casting with instanceof keyword 
+
+if(parentObj instanceof childClass)(
+    ((childClass) parentObj).method()
+)
+
+
+
+
+but the downcasting would work if the parent class was referring to the child class. kind of the dynamic method dispatch 
+
+
+
+
+
+prevent inheritance 
+
+
+
+
