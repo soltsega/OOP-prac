@@ -457,8 +457,6 @@ what is field name here: it is the variable name to get set
 getters
 
 
-
-2
 1. Setters and Method Injection
 Setters are public methods used to update private variables. This is called encapsulation. You can "set" a behavior by passing a Lambda or a Functional Interface (like Runnable) into a setter. This lets you swap out logic while the program is running. It is a best practice to put validation logic inside a setter.
 
@@ -536,14 +534,9 @@ it is intended to make it simple but How?
 
 let's see what wil happen if we apply multiclas inheritance 
 
-
-
 multilevel inheritance  
 
-
-
 hierarchical inheritance 
-
 
 what is the relatiosnhip between constructors and inheritance concepts 
 the child class must call the parent's constructor
@@ -565,7 +558,6 @@ cascading
 
  can we have constructor cascading 
  can we call the default constructor in the parametrized constructor ?
-
 
 The child can't call the grandparent's constructor: it has to be in order.they must be chained
 
@@ -636,14 +628,12 @@ use religious holidays
 may be cool both encapsulation and inheritance 
 
 
-
 how to prevent method overriding using final and static 
 i can use the final keyword as we can use it for variables 
 it will not get modifierd or overriden but inherited 
 
 what would happen if the child class tries to do that?
 it raises compile time error, syntax error 
-
 
 what if we use the static keyword and what would happen if we do the same thing as we have done to final classes
 what are the differences between the static and final keywords in this usage 
@@ -653,19 +643,9 @@ we can call the class static method using the name of the class it is in. it wil
 
 how to use the super keyword 
 
-
 what if we make the class static 
 
-
-
 what if we make the class final 
-
-
-
-
-
-
-
 
 typecasting 
 the superclass can refer to the child class 
@@ -681,17 +661,24 @@ if(parentObj instanceof childClass)(
     ((childClass) parentObj).method()
 )
 
-
-
-
 but the downcasting would work if the parent class was referring to the child class. kind of the dynamic method dispatch 
 
-
-
-
-
 prevent inheritance 
+we can make classes final, public or default but not the other way round 
 
 
 
+
+do the homework
+natural and cultural heritage 
+
+
+👉👉👉store receipt generator
+a student is buying 3 items from the campus store to calculate . the program needs to calculate the subtotal, apply 5%s student duscount total
+
+your program msut display a receipt that includes 
+1. the names and prices of all three items 
+2. the calculated subtotal 
+3. the discount amout 
+4. the final total
 
