@@ -72,16 +72,20 @@ public class TempretureConverter {
 
 
     public void kelvinCF() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter temperature in Kelvin: ");
-        double kelvin = scanner.nextDouble();
-        scanner.nextLine();
-
-        double celsius = kelvin - 273.15;
-        double fahrenheit = (celsius * 9/5) + 32;
-
-        System.out.println(kelvin + " degrees Kelvin is equal to " + celsius + " degrees Celsius.");
-        System.out.println(kelvin + " degrees Kelvin is equal to " + fahrenheit + " degrees Fahrenheit.");
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.print("Enter temperature in Kelvin: ");
+            double kelvin = scanner.nextDouble();
+            scanner.nextLine();
+            
+            double celsius = kelvin - 273.15;
+            double fahrenheit = (celsius * 9/5) + 32;
+            
+            System.out.println(kelvin + " degrees Kelvin is equal to " + celsius + " degrees Celsius.");
+            System.out.println(kelvin + " degrees Kelvin is equal to " + fahrenheit + " degrees Fahrenheit.");
+        }catch (Exception e) {
+            System.out.println("An error occurred while reading input. Please try again.");
+        }
+    
     }
 }
 
