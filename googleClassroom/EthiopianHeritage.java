@@ -22,19 +22,22 @@ public class EthiopianHeritage {
 }
 
 class Heritage {
-    protected final String name;
+    protected final String name;  //we made this one protected so that it can be accessed by subclasses
     protected final String description;
 
+    // constructor to initialize the name and description of the heritage site
     public Heritage(String name, String description) {
         this.name = name;
         this.description = description;
     }
 
+    // method to display information about the heritage site. Generic implementation that can be overridden by subclasses for more specific details.
     public void showInfo() {
         System.out.println("Name: " + name);
         System.out.println("Description: " + description);
     }
 }
+
 
 class NaturalHeritage extends Heritage {
     private final String naturalFeature;
