@@ -1,3 +1,4 @@
+package dishes_classwork;
 public interface Edible {
     // Constants are public, static, final by default
     double MAX_PORTION_SIZE = 1000.0;

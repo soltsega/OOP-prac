@@ -1,7 +1,9 @@
-public class Salad implements Edible {
+package dishes_classwork;
+
+public class Selata implements Edible {
     private String name;
     
-    public Salad(String name) {
+    public Selata(String name) {
         this.name = name;
     }
     
