@@ -682,3 +682,97 @@ your program msut display a receipt that includes
 3. the discount amout 
 4. the final total
 
+
+
+what is abstraction
+abstract class 
+is a conceptual class 
+when to use it 
+we can't create an objectfor an abstract class 
+we needed it due to the fact that it has an abstract method. the method will not have body but signature or header
+
+syntax 
+public abstract class T{
+
+}
+it can have methods, attributes, constructors, or abstract methods 
+
+
+
+
+
+
+abstract method 
+public abstract returnType name([param]);
+
+how can i let other class interact with this ?
+we use the inheritance to do this 
+we need to have subclasses so that we can do inheritacen and then override the methods that are there in the abstract class 
+
+class X extends T{
+    then it is compulsory to override the methods of the abstract class 
+
+}
+
+what are the characteristics of the abstract classes beyond he basics 
+can we have static abstract method
+static methods can't be overridden and the abstract methods has to be overridden which is a paradox 
+is there any possibility of the subclass not overridding the abstrac method of the abstract class
+this can happen if the subclass is also abstract 
+so we will need a concrete class in teh end to close the case
+and the last concrete class has to override all the methods of the abstract classes it inherited 
+
+what is the recommended access modifier of the aabstract classes and when to do so 
+can abstract have constructors and what is the difference between the constructors of the concrete and abstract classes
+because of the fact that the child class has to call the constructors of teh parent classes. and the abstract classes are no exception
+which one is recommended to use: just creating a concrete class and then have methods to get overriden or abstract classes with methods to get overridden 
+
+
+
+both static and final methods can't be overridden. what is their difference tho?
+
+what would be the use of creating a variable of the abstract class with out assigning it to 
+
+
+partial implementation
+this happens when we have many abstract methods
+the class implements some of the methods and let's the remmaining to the child classes 
+
+which method is to get overriden if we have one grandparent and parent abstract classes and then they are to get inherited by a concrete class. 
+which method is to get overridden if we have two abstract mehtods with teh same signature? it will override the immediate method 
+what about the concrete cases 
+ 
+
+
+access modifier on method overridng 
+interface 
+interface definition
+
+constant 
+methods 
+
+implementation interface 
+partial implementation
+extending interfaces
+
+
+polymorphism 
+via inheritance 
+via interface 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
