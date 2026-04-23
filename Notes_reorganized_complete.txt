@@ -760,16 +760,92 @@ polymorphism
 via inheritance 
 via interface 
 
+what are conceptual entities?
+interface is also a conceptual entity as abstract class is 
+we can't create an object of the interface as it is conceptual entity
+
+syntax
+interface identifier {
+
+
+members: has two. no other member is allowed in the interface
+1. static constants
+final static int x 
+
+what if we use other modifiers
+it accepts the format but it implicitely changes them to static final 
+static int x 
+final int x 
+int x 
+
+
+they are all acceptable format of declaration. but they all must be initialized 
 
 
 
 
+2. methods 
 
 
 
+what are the three types of methods 
+1. abstract methods
+2. static methods 
+3. default methods 
+
+
+the last two types of methods are added from java8 and onwards
+
+why....?
+
+what are the rationale behind using interfaces in java
+we have two reasons to do this 
+1. multiclass inheritance 
+2. when we have no direct relationship like is a or parent child or kind of things 
+unrelated entities 
+
+how can we get services from an interface 
+i need to have a class to implement this 
+
+
+can we have two or more interfaces that exchange each other 
+what would be the access modifier of the class that implements the inteface methods 
+we can use only the public access modifer 
+because ot the fact that every component of an interface is public 
+why does it have to be like this 
+
+what is dynamic method calling and how 
+
+
+why did the early distribution ofjava did not allow multiclass inheritance 
+what is the dymond problem that is caused by multiclass inheritance and how did the intefaces overcame this 
+
+how can i make relationship between interfaces and make layers 
+what is the service that can be offerred by making layers
+why do we not have mutual relationship between interfaces 
+
+which keyword can i use to make relationship between intefaces 
+can using the name method name craete compile time error or conflict between interfaces as the interface methods are public 
+what is the difference between the interface methods and other class methods beyond the common 
+
+
+how can one interface inherit or extend another interface or class 
+the last class mmust overrride all the interface methods above to make it happen 
+what are the common errors or bugs that we encounter here  
+can we have hierarchy of all the combinations, like concrete classes, interfaces and abstract classes 
+what are the things to get wary of 
+
+
+which one hae precedence? implementing or ineheriting from the parent class 
+we can extend and also implement
+interface can only extend interface
+do i have to implement all the chained methods of the intrfaces 
 
 
 
+to read 
+partial implementation 
+and polymorphism 
 
 
 
