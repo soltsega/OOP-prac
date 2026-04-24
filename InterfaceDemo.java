@@ -1,3 +1,6 @@
+import dishes_classwork.Edible;
+import dishes_classwork.Salad;
+
 public class InterfaceDemo {
     public static void main(String[] args) {
         // Basic interface usage

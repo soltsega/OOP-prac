@@ -1,3 +1,5 @@
+import dishes_classwork.Edible;
+
 public interface Gourmet extends Edible {
     void plate();
     void garnish();
