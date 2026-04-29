@@ -404,7 +404,6 @@ Static block - runs once
 Instance block - runs per object
 Constructor - runs per object
 Instance block - runs per object
-Constructor - runs per object
 
 
 what is Encapsulation
@@ -479,7 +478,6 @@ Quick Rule of Thumb:
 
 what is the idiffernce between method and constructor inejection
 Method Injection is a design pattern where an object receives its dependencies (the tools or data it needs to work) through a method rather than through its constructor.
-Gemini said
 Method Injection is a design pattern where an object receives its dependencies (the tools or data it needs to work) through a method rather than through its constructor.
 
 In the context of our previous conversation, it is the formal name for "setting a method" or "setting a behavior" using a setter.
