@@ -1,3 +1,4 @@
+package general;
 // Partial Implementation and Polymorphism Examples
 
 // Abstract class with partial implementation

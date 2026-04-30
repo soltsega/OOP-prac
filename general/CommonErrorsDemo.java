@@ -1,3 +1,4 @@
+package general;
 // Common Errors and Bugs with Interfaces and Inheritance
 
 // ERROR 1: Diamond Problem with Default Methods

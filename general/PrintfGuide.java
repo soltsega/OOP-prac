@@ -1,3 +1,4 @@
+package general;
 // Java printf() Method - Complete Guide
 
 public class PrintfGuide {

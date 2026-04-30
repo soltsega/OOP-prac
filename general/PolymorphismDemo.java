@@ -1,6 +1,8 @@
+package general;
 // Polymorphism Examples
 
 // Interface for polymorphic behavior
+
 interface Drawable {
     void draw();
     default void getInfo() {
