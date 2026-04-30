@@ -1,4 +1,5 @@
-// Java Constructors - Complete Guide
+package general;
+//  Java Constructors - Complete Guide
 
 // 1. BASIC CONSTRUCTOR
 class Person {

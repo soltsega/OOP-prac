@@ -1,3 +1,4 @@
+package general;
 // Basic interface definition
 public interface Edible {
     // Constants are public, static, final by default

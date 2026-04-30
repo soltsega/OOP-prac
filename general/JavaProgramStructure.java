@@ -1,8 +1,7 @@
+package general;
 // Java Program Structure Example
 
 // Package declaration (optional but recommended)
-package com.example.programstructure;
-
 // Import statements
 import java.util.Scanner;
 import java.util.ArrayList;

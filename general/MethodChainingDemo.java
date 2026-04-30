@@ -1,3 +1,5 @@
+package general;
+
 // Method Chaining Examples in Java
 
 // 1. Basic Method Chaining with Fluent Interface

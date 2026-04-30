@@ -1,3 +1,4 @@
+package general;
 // Java Object Comparison Methods
 
 import java.util.*;
