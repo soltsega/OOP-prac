@@ -1,3 +1,4 @@
+package JavaLab;
 // Problems with Java Default Methods
 
 // 1. DIAMOND PROBLEM - Multiple Inheritance Conflict

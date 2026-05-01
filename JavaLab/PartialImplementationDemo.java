@@ -1,9 +1,15 @@
+package JavaLab;
 // Partial Implementation in Abstract Methods and Interfaces
 
 // 1. ABSTRACT CLASS - Partial Implementation
 abstract class Vehicle {
     protected String brand;
     protected int year;
+
+    public Vehicle(final String brand, final int year) {
+        this.brand = brand;
+        this.year = year;
+    }
     
     // Concrete method - shared implementation
     public void displayInfo() {
@@ -234,6 +240,8 @@ class Rectangle extends Shape implements Resizable {
 interface Movable {
     void move(double deltaX, double deltaY);
     
+
+    // Default method
     default void resetPosition() {
         move(0, 0);
     }
@@ -416,6 +424,8 @@ public class PartialImplementationDemo {
             movableCircle
         };
         
+
+        // Polymorphism - calling default methods that rely on abstract method implementations
         for (final Drawable drawable : drawables) {
             drawable.display();       // Uses default implementation
             drawable.resize(0.8);    // Uses default implementation

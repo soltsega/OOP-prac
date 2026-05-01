@@ -1,3 +1,4 @@
+package JavaLab;
 /**
  * The Coffee Shop 
 * 1. Create a class named CoffeeOrder.
