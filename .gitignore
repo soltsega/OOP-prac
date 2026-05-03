@@ -10,3 +10,8 @@ chapter2/chapter_two_outline.txt
 Notes.txt
 GUI/Full_notes_on_gui.md
 .vscode/launch.json
+src/main/resources/application.properties
+target/classes/application.properties
+target/classes/application.properties
+src/main/resources/application.properties
+target/classes/application.properties

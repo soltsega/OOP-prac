@@ -1,4 +1,3 @@
-application.properties
-static\app.js
-static\styles.css
-static\index.html
+com\oopprac\contactmanager\ContactController.class
+com\oopprac\contactmanager\ContactManagerApplication.class
+com\oopprac\contactmanager\Contact.class
