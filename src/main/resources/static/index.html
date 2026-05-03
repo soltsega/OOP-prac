@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="app-shell">
+        <section class="panel form-panel" aria-labelledby="form-title">
+            <p class="eyebrow">Spring Boot Mini App</p>
+            <h1 id="form-title">New Contact</h1>
+            <p class="subtitle">Save contact details through a small Java REST API.</p>
+
+            <form id="contact-form">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required>
+
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required>
+
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" inputmode="numeric" placeholder="10 digits" required>
+
+                <div class="actions">
+                    <button class="primary" type="submit">Add Contact</button>
+                    <button class="secondary" type="reset">Clear</button>
+                </div>
+            </form>
+
+            <p id="message" class="message" role="status"></p>
+        </section>
+
+        <section class="panel list-panel" aria-labelledby="contacts-title">
+            <div class="list-header">
+                <div>
+                    <p class="eyebrow">Saved Locally</p>
+                    <h2 id="contacts-title">Contacts</h2>
+                </div>
+                <span id="count">0 saved</span>
+            </div>
+
+            <div id="contacts" class="contacts empty">
+                <p>No contacts yet.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
