@@ -839,8 +839,6 @@ we can extend and also implement
 interface can only extend interface
 do i have to implement all the chained methods of the intrfaces 
 
-
-
 to read 
 partial implementation 
 and polymorphism 
@@ -850,336 +848,176 @@ and polymorphism
 
 
 
->>> partial implementation of methods in interfaces
-Before Java 8, interfaces were mainly used for:
-1. public static final constants
-2. public abstract methods
+👉👉👉 partial implementation of methods
+since java8 they have come up wiht something in interfaces
+they were used on ly static constant and static constants
+that is and in tanc method
+it is a concrete method
 
-Starting from Java 8, interfaces can also contain concrete methods:
-1. default methods
-2. static methods
 
-Starting from Java 9, interfaces can also contain private helper methods:
-1. private instance methods
-2. private static methods
+
+Read more 
 
 
 
 default method
-what is the need for a default method?
-It is mainly used for backward compatibility.
+what is the need of defalt method?
+it is for a backward compatibilty
+if you want to add more methods in the interface, it would create an errror in all of the classes that signed the contract to implement the methods in the interface 
+htey must override 
 
-If we add a new abstract method to an interface, every class that already implements that interface must override the new method. This may create errors in many existing classes.
-
-The fix is to add a default method instead of an abstract method.
-Classes that implement the interface automatically inherit the default implementation.
-They are not forced to override it, but they are allowed to override it if they need different behavior.
+so what is the fix here that the default methods can offer 
 
 
-interface A {
+so instead of adding, let's add a default methods 
+they will not be affecteed due to the fact that they don't have ot override. but they still can do it 
 
-    // It needs the default keyword.
-    default void a() {
-        System.out.println("A default method");
+
+interface A  {
+
+👉  it needs the default keyword 
+    default void a(){
+        ...
+        ..
+        .
     }
 
-    // This is a concrete method because it has a body.
-    // Any class that implements A inherits this method.
+    it is a concrete method and need an implementation
+    any class that implements the interface inherits a 
+
 }
 
 
-what is the new thing here?
-An interface can now provide partial implementation.
-This means the interface can define some methods as abstract contracts and provide ready-made behavior for other methods.
+what is the new thing here 
 
 
 
-what if we have two interfaces with the same default method?
-where will it backfire?
+what if we have two interfaces with the same method 
+and where will it backfire 
 
-If a class implements two interfaces that contain the same default method signature, Java cannot automatically choose which method to inherit.
-This creates a conflict.
+but if i create a class that implements and inherits both then it will create a confusion of ehich one to implemnet 
+which method are we referring to 
+and how to resove this 
 
-Example:
-
-interface A {
-    default void a() {
-        System.out.println("A");
-    }
-}
-
+👉  
 interface B {
-    default void a() {
-        System.out.println("B");
+    default void a (){
+
     }
 }
 
+
+it wll be a must to override the default method
+it is not allowed to use default mehtod in classes; only in interfaces
 
 class T implements A, B {
-
-    // It is mandatory to override the conflicting default method.
-    public void a() {
-        System.out.println("T");
-    }
+public void a(){
+    ....
+}
 }
 
-
-It is not allowed to use the default keyword in normal classes.
-The default keyword for concrete methods is only used inside interfaces.
-
-
-what if the overriding method wants to invoke one of the interface methods above?
-Use InterfaceName.super.methodName().
-
-class T implements A, B {
-    public void a() {
-        A.super.a();      // calls A's default method
-        B.super.a();      // calls B's default method
-        System.out.println("T");
-    }
-}
+what if the method wants to invoke any of the methods above
+it has to use the fully qualified...? ew can't call the method using the instance since it is an instane 
 
 
-what are the behaviors of default methods?
-1. A default method is inherited by implementing classes.
-2. A class may override a default method.
-3. If two parent interfaces provide the same default method, the child class or child interface must resolve the conflict.
-4. A default method is an instance method, not a static method.
-5. A default method can call private interface helper methods.
+what are the behaviors of the defualt methods 
+we cna't evne use hte super keyworkd dues to the fact that suuper is reserved to the classes
 
-Important rule:
-A class method has priority over an interface default method.
+👉👉👉  the fix: A.super.a();
 
-Example:
-
-class Parent {
-    public void a() {
-        System.out.println("Parent");
-    }
-}
-
-interface A {
-    default void a() {
-        System.out.println("A");
-    }
-}
-
-class Child extends Parent implements A {
-}
-
-Child obj = new Child();
-obj.a();       // Parent is called
+we achieved both overridng and inheritance here
 
 
 
-what if we create references of A or B and call method a?
+
+👉 hwat if we create an object of A or B and call the method a with the corresponding objects
 
 T t = new T();
 t.a();
-// compile-time reference type: T
-// run-time object type: T
+//compile time - T, run time - T
 
 A x = new T();
 x.a();
-// compile-time reference type: A
-// run-time object type: T
+//compile time - A, run time - T
 
 B y = new T();
 y.a();
-// compile-time reference type: B
-// run-time object type: T
+//compile time - B, run time - T
 
 
-what is the compile-time and run-time resolution of the references here?
-compile time - the reference type determines which methods are accessible.
-run time - the actual object type determines which overridden implementation is executed.
+what is the run time and compile time resolvution of the references here
 
-This is polymorphism.
+compile time - the reference type determines which method is called
+run time - the actual object type determines which implementation is executed
 
+why are other concrete methods not allowed in interfaces?
+because they need obejcts to access them
 
-why are other ordinary concrete instance methods not allowed in interfaces?
-Interfaces do not represent complete objects. They represent contracts or services.
-Default methods are allowed as a controlled exception to support partial implementation and backward compatibility.
+default methods inherited or overridden 
 
-
-default methods: inherited or overridden?
-They can be inherited if there is no conflict.
-They must be overridden if there is a conflict between two parent interfaces.
-They may be overridden when the class needs its own behavior.
-
-
-what are other issues?
-is this allowed?
-
+what are other isssues
+👉👉 is this allowed?  
 interface C extends A, B {
+
 }
 
-If A and B have the same default method, C will have a compile-time error unless C resolves the conflict.
+since interface A and B have the same method, interface C will have a syntax error
+C can override but only by using the defalt method
+what f i have an abstract method in the above interfaces of A and B?
+it can but t is not obliged to do so?
 
-One solution:
+what is the dymond problem here
 
-interface C extends A, B {
-    default void a() {
-        A.super.a();
-    }
-}
+what if we override all of the methods above and we dont have necessary methods to overide finally
+can 
+what is the return type of the defualt method
+declaring interfaces cause an error 
+ 
 
-Another solution:
+the dymond problem is resoved by overriding the method that is causing the problem
+what if we apply the same shit in classes
 
-interface C extends A, B {
-    void a();       // makes it abstract again
-}
+but classes have more things to do than the interfaces
+we would have cluttered and redendant memory if we have the same attributes in the classes we have inherited
+we don't have this problem in instances because of the fact that we have only static attributes in intances 
 
 
-what if the same method is abstract in one interface and default in another?
-The default method can satisfy the abstract method if there is no conflict.
+👉  what are the other glitches in using this for classes and what are the thinfs we have to be wary of in intances still
 
-Example:
+  
+👉  what are teh private default methods introduced in java9 and on
+👉  what do they solve and the headaches still
+
+👉  👉  👉  staitc methods: it is a method that describe the interface
+java8 come up with one more concrete method which is static Method
+we can have static method which is 
+do we override static mehtods? no way
+
 
 interface A {
-    void a();
-}
-
-interface B {
-    default void a() {
-        System.out.println("B");
+    static void x (){
+        ....
     }
 }
-
-class T implements A, B {
-    // No override is required because B supplies a default implementation.
-}
+what if we have static and default instance methods with the same signature?
+what if we have similar satic methods in two parent interfaces?
 
 
-what is the diamond problem here?
-The diamond problem happens when a class can inherit the same method through two different paths and Java cannot decide which implementation to use.
-
-With interfaces, Java solves this by forcing the class or child interface to override the conflicting method.
-
-
-what is the return type of a default method?
-A default method can have any valid return type: void, primitive type, object type, array type, etc.
-
-Example:
-
-interface Calculator {
-    default int add(int a, int b) {
-        return a + b;
-    }
-}
-
-
-what if we apply the same idea to classes?
-Java does not allow multiple inheritance of classes.
-A class can extend only one class.
-
-Reason:
-Classes can contain state/attributes, constructors, instance initialization, and concrete behavior.
-If Java allowed a class to extend multiple classes, the compiler would face more ambiguity:
-1. Which parent constructor should run first?
-2. Which inherited field should be used if two parents define the same field?
-3. Which method implementation should win?
-4. How should memory be arranged for inherited state?
-
-Interfaces avoid most of these problems because interface fields are public static final constants, not per-object instance variables.
-
-
-what are the things to be careful about in interfaces?
-1. A class can implement many interfaces, but it must resolve conflicting default methods.
-2. Interface variables are constants: public static final.
-3. Interface methods are public by default, so implementing methods must be public.
-4. Static interface methods are not inherited like instance methods.
-5. Private interface methods are only helpers inside the interface.
-
-
-
->>> private methods in interfaces, introduced in Java 9
-what do they solve?
-Private methods help remove duplicated code inside default and static methods.
-They are utility methods for the interface itself.
-
-There are two kinds:
-1. private instance methods
-2. private static methods
-
-Example:
-
-interface Logger {
-    default void info(String message) {
-        log("INFO", message);
-    }
-
-    default void error(String message) {
-        log("ERROR", message);
-    }
-
-    private void log(String level, String message) {
-        System.out.println(level + ": " + message);
-    }
-}
-
-
-Rules:
-1. A private interface method cannot be called outside the interface.
-2. A private instance method can be called by default methods.
-3. A private static method can be called by static methods and default methods.
-4. Private methods are not inherited by implementing classes.
-
-
-
->>> static methods in interfaces
-A static method describes utility behavior related to the interface.
-Java 8 introduced static methods in interfaces.
-
-interface A {
-    static void x() {
-        System.out.println("static method in A");
-    }
-}
-
-
-do we override static methods?
-No. Static methods are not overridden.
-They belong to the interface itself, not to an object.
-
-
-how do we call a static interface method?
-Use the interface name.
-
+can we invoke the parent static method in the child static method and how
+we just call it with it name in normal classes 
+use the interface name and the name of the method? but why 
 A.x();
+we have to use the name of the interface
 
-can we invoke a parent interface static method from another static method?
-Yes, but we still use the interface name.
 
-interface B {
-    static void y() {
-        A.x();
-    }
-}
+👉  there is a private instance method but it can't o out side of the interface but as a utility n the interface?
+we can also have private static method
+what would be the utilities that we can get offerred by these private methods
 
-what if we have similar static methods in two parent interfaces?
-There is no default-method conflict because static interface methods are not inherited by the class.
-Call them using their interface names:
 
-A.x();
-B.x();
-
-what if we have a static method and a default instance method with the same signature?
-Inside the same interface, this is not allowed because the method signature would be duplicated.
-In different interfaces, there is no conflict unless the class tries to define or use a method in a way that creates ambiguity.
-
->>> next - polymorphism
-things - note the applications mentioned in the exercise files
-we will start GUI next time
-choose one for your groups
-we need to add database and GUI
+👉  👉  👉  next - polymorphism
+things - note the applications mentioned in teh exercise files
+we will start gui  next time
+choose one for you groups
+we need to ad databse and gui
 pick one from the exercise files
-
-
->>> next - database
-we will start GUI next time
-
-
-
-when to use setters and cosntructors together
-when to prefer gettersa dn setters over constructors and vice versa 
