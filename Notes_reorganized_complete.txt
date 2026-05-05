@@ -1021,3 +1021,14 @@ we will start gui  next time
 choose one for you groups
 we need to ad databse and gui
 pick one from the exercise files
+
+
+
+
+
+
+
+use this command to use the local host:  set JAVA_HOME="C:\Program Files\Java\jdk-25.0.2" && "C:\Users\My Device\.maven\maven-3.9.15\bin\mvn" spring-boot:run
+Runs the app: Starts the server on http://localhost:8081.
+Once it finishes loading, you can access it at http://localhost:8081/api/contacts.
+
