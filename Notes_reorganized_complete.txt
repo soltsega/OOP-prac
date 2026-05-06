@@ -1032,3 +1032,129 @@ use this command to use the local host:  set JAVA_HOME="C:\Program Files\Java\jd
 Runs the app: Starts the server on http://localhost:8081.
 Once it finishes loading, you can access it at http://localhost:8081/api/contacts.
 
+
+
+polymorphism
+types of polymmorphism
+compile time and run time
+compile time polymorphism - method overloading
+
+
+method overriding - run time polymorphism
+
+what is the argument in deciding which one is which 
+some developers say the dynamic one is the only one to be called polymorphism
+
+
+
+let's see the run rime(dynamic one)
+
+1. via inheritance 
+we have two types of implementations
+we can use the abstract one or the concrete one to do this 
+we can use the either way
+we have to make both the parent and the child concrete to implement the concrete one 
+
+
+
+the second one is the abstract one
+the class will be abstract and have an abstract method that has to be implemented forcefully
+we can have concrete method too 
+
+
+we can also use the interfaces to achieve this
+they have to be implemented by the classes and must override the abstract and default methods
+
+
+we have to have super class variable and method oeverriding
+
+2. via 
+
+
+
+things to be done
+adding visualization to the documentation
+java project idea and draft 
+desktop applications 
+cli and finally make it with gui
+
+
+👉  👉  👉 Error handling in java
+
+
+👉  👉  👉Java gui
+introductio 
+awt and swing 
+the three major topics 
+the swing component hierarchy 
+top level container frame 
+general purpose contaitner - panel 
+atomic components 
+
+
+layout manager - decide the size, the ....
+
+event handling - it is where it gets life 
+we need an interaction with the user 
+
+DEM - 
+steps to deal with event handling 
+ways to define listner class
+adapter class 
+there are about hundreds of components 
+we will have to be selective of the common ones 
+
+
+1. awt and swing 
+awt - plateform and os dependent
+native package of java 
+is a heavy weight package due to the fact that it requires the os peer component to run the components 
+what does this one mean and to how much extent does it go 
+may not have the same behavior depending on the os 
+
+
+2. swing
+it does need the os peer component and have its own window 
+platformm independent 
+lightweight 
+it does not replace awt completely. there are some capabilities we need from awt
+
+
+3. JFX - what are the capabilities of jfx that are not offerred by the prevous two 
+
+
+
+import java.awt.*;
+import java.swing.*;
+
+swing components hierarchy 
+Jframe
+is a class 
+what is the difference between the awt and swing frame classes 
+
+Jpanel
+
+we can create a frame or other component 
+1. via inheritance(extending)
+2. object creation 
+which one should we go for?
+
+General purpose containers 
+Jpanel
+they need the frame and top level components 
+
+
+when do we need to use both and what are the specific capabilities i can be privilege of 
+
+
+
+
+
+
+
+
+
+
+
+
+

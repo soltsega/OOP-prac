@@ -15,3 +15,7 @@ target/classes/application.properties
 target/classes/application.properties
 src/main/resources/application.properties
 target/classes/application.properties
+spring-boot.err.log
+*.log
+spring-boot.log
+spring-boot.log.*
