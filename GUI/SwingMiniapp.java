@@ -1,7 +1,8 @@
-package GUI;
+package gui;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
+import java.awt.BorderLayout;  //for BorderLayout
+//do the same for all the libraries we imported
+import java.awt.Color;  //for 
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Font;
